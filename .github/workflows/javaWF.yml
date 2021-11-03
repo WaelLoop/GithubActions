@@ -12,8 +12,11 @@ jobs:
           java-version: '11'
       - run: java --version
       - run: cat README.md
-      
-      - name: TestingCheckout
+  java-job2:
+    runs-on: ubuntu-latest
+    needs: java-job
+    steps:
+      - name: TestingCheckoutRepo
       - uses: actions/checkout@v2
         with:
           repository: 'WaelLoop/TestingCheckout'

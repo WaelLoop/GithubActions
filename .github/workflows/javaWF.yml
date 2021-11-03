@@ -10,6 +10,7 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
       - run: java --version
+      - run: echo ${{ github.repository }}
   java-job2:
     runs-on: ubuntu-latest    
     needs: java-job
